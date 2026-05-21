@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Reservations — Ember & Rye, Peckham</title>
+<meta name="description" content="Book a table at Ember & Rye in Peckham. Wood-fired food, natural wine and a Sunday roast worth travelling for." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="/index.html" class="logo">Ember <span>&</span> Rye</a>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/menu.html">Menu</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/reservations.html" class="btn btn-primary active">Reserve a Table</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero" style="background-image:linear-gradient(rgba(20,15,8,.55),rgba(20,15,8,.65)),url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1920&q=80')">
+  <span class="eyebrow" style="color:var(--accent)">Book a Table</span>
+  <h1>Reservations</h1>
+  <p>Tell us when you'd like to come and we'll confirm by email within a few hours.</p>
+</section>
+
+<section>
+  <div class="container">
+    <div class="reserve-grid">
+      <form id="reservation-form" class="form-card fade-up" novalidate>
+        <h2 style="margin-bottom:1.5rem">Make a Booking</h2>
+        <div class="form-row">
+          <div class="form-group"><label for="name">Full Name</label><input id="name" name="name" type="text" required /></div>
+          <div class="form-group"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required /></div>
+        </div>
+        <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+        <div class="form-row">
+          <div class="form-group"><label for="date">Date</label><input id="date" name="date" type="date" required /></div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <select id="time" name="time" required>
+              <option value="">Select a time</option>
+              <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+              <option>14:00</option><option>17:00</option><option>17:30</option><option>18:00</option>
+              <option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option>
+              <option>20:30</option><option>21:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <select id="guests" name="guests" required>
+            <option value="">Select guests</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            <option>6</option><option>7</option><option>8+ (please call)</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="notes">Special Requirements</label><textarea id="notes" name="notes" placeholder="Allergies, celebrations, accessibility needs..."></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Request Booking</button>
+        <div class="form-status" style="display:none;margin-top:1.5rem;padding:1rem;background:var(--sand-soft);border-radius:var(--radius);font-size:.95rem;color:var(--ink)"></div>
+      </form>
+
+      <aside class="reserve-info fade-up">
+        <h3>Opening Hours</h3>
+        <div class="info-card">
+          <p><strong>Monday</strong> — Closed</p>
+          <p><strong>Tue – Thu</strong> 5pm – 10pm</p>
+          <p><strong>Fri – Sat</strong> 12pm – 11pm</p>
+          <p><strong>Sunday</strong> 12pm – 9pm</p>
+        </div>
+
+        <div class="note">
+          <strong>Large groups:</strong> Bookings of 8 or more should be made by phone — call us on <strong>020 7946 0318</strong> and we'll sort you out.
+        </div>
+
+        <h3 style="margin-top:2rem">Find Us</h3>
+        <div class="info-card">
+          <p><strong>14 Rye Lane</strong></p>
+          <p>Peckham, London SE15 4NB</p>
+          <p>hello@emberandrye.co.uk</p>
+        </div>
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Rye+Lane,+Peckham,+London+SE15&output=embed"></iframe>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="color:#fff">Ember <span>&</span> Rye</div>
+        <p>A neighbourhood restaurant in Peckham. Wood fire, natural wine, no airs.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.5h2.86l.43-3.33H13.5V8.04c0-.96.27-1.62 1.65-1.62h1.76V3.43c-.86-.09-1.72-.13-2.59-.13-2.56 0-4.32 1.56-4.32 4.44v2.43H7.13v3.33h2.87V22h3.5z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Visit</h4><ul><li>14 Rye Lane</li><li>Peckham, London</li><li>SE15 4NB</li><li>020 7946 0318</li></ul></div>
+      <div><h4>Hours</h4><ul><li>Mon — Closed</li><li>Tue–Thu 5–10pm</li><li>Fri–Sat 12–11pm</li><li>Sun 12–9pm</li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="/menu.html">Menu</a></li><li><a href="/about.html">About</a></li><li><a href="/gallery.html">Gallery</a></li><li><a href="/reservations.html">Reservations</a></li></ul></div>
+    </div>
+    <div class="copyright">© 2026 Ember & Rye. All rights reserved.</div>
+  </div>
+</footer>
+<script src="/main.js"></script>
+</body>
+</html>
